@@ -1,0 +1,63 @@
+/* src/styles/PartialList.css */
+
+.order-card-partial {
+  background-color: var(--bg-card);
+  border-radius: 16px;
+  padding: 20px;
+  border: 1px solid #fcd34d; /* ขอบเหลืองส้มให้รู้ว่ารอดำเนินการต่อ */
+  box-shadow: var(--shadow-sm);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.card-brand-partial {
+  display: inline-block;
+  background-color: #fef3c7;
+  color: var(--accent-amber);
+  font-size: 0.75rem;
+  font-weight: 700;
+  padding: 4px 10px;
+  border-radius: 20px;
+}
+
+.qty-control-box {
+  background-color: #faf6f0;
+  padding: 12px;
+  border-radius: 12px;
+  border: 1px solid var(--border-color);
+}
+
+.qty-input {
+  width: 55px;
+  text-align: center;
+  padding: 6px;
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  font-family: inherit;
+  font-weight: 700;
+  font-size: 1rem;
+  color: var(--text-main);
+  background-color: #ffffff;
+  outline: none;
+}
+
+.btn-qty {
+  width: 32px;
+  height: 32px;
+  border-radius: 8px;
+  border: 1px solid var(--border-color);
+  background-color: #ffffff;
+  color: var(--text-main);
+  font-size: 0.9rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s ease;
+}
+
+.btn-qty:hover {
+  background-color: var(--text-main);
+  color: #ffffff;
+}

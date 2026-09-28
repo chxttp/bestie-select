@@ -1,0 +1,192 @@
+/* src/styles/AdminTable.css */
+
+.admin-table-container {
+  background-color: var(--bg-card);
+  border-radius: 18px;
+  border: 1px solid var(--border-color);
+  padding: 24px;
+  box-shadow: var(--shadow-sm);
+}
+
+.table-header-flex {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 18px;
+}
+
+.table-header-flex h3 {
+  font-size: 1.2rem;
+  color: var(--text-main);
+  font-weight: 800;
+}
+
+.filter-bar {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 20px;
+  flex-wrap: wrap;
+}
+
+.admin-table-wrapper {
+  width: 100%;
+  overflow-x: auto; /* ให้เลื่อนแนวนอนบนมือถือ/แท็บเล็ตได้ */
+  border-radius: 12px;
+  border: 1px solid var(--border-color);
+}
+
+.modern-table {
+  width: 100%;
+  border-collapse: collapse;
+  min-width: 980px; /* บังคับขนาดขั้นต่ำเพื่อป้องกันข้อความตารางซ้อนกันบนจอเล็ก */
+  font-size: 0.9rem;
+}
+
+.modern-table th {
+  background-color: #faf6f0;
+  color: var(--text-main);
+  font-weight: 700;
+  text-align: left;
+  padding: 14px 16px;
+  border-bottom: 1px solid var(--border-color);
+  white-space: nowrap;
+}
+
+.modern-table td {
+  padding: 14px 16px;
+  border-bottom: 1px solid var(--border-color);
+  color: var(--text-main);
+  vertical-align: middle;
+}
+
+.modern-table tbody tr:hover {
+  background-color: #faf8f5;
+}
+
+.col-date {
+  font-size: 0.82rem;
+  color: var(--text-muted);
+  white-space: nowrap;
+}
+
+.col-customer {
+  font-weight: 700;
+  color: var(--text-main);
+}
+
+.col-address {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  max-width: 180px;
+  word-wrap: break-word;
+}
+
+.col-product {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.brand-badge {
+  display: inline-block;
+  align-self: flex-start;
+  font-size: 0.7rem;
+  font-weight: 700;
+  background-color: #f2ebe4;
+  color: var(--text-main);
+  padding: 2px 8px;
+  border-radius: 12px;
+}
+
+.product-name {
+  font-weight: 600;
+}
+
+/* Form Controls ในตาราง */
+.modern-input {
+  padding: 6px 10px;
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  font-family: inherit;
+  font-size: 0.88rem;
+  outline: none;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.price-input {
+  width: 90px;
+  font-weight: 700;
+}
+
+.modern-select {
+  padding: 6px 10px;
+  border-radius: 8px;
+  border: 1px solid var(--border-color);
+  font-family: inherit;
+  font-size: 0.85rem;
+  font-weight: 600;
+  outline: none;
+  cursor: pointer;
+}
+
+/* สีเฉพาะของแต่ละสถานะใน Dropdown */
+.payment-select.unpaid { background-color: #fef2f2; color: #dc2626; border-color: #fca5a5; }
+.payment-select.deposit { background-color: #fef3c7; color: #d97706; border-color: #fcd34d; }
+.payment-select.full { background-color: #d1fae5; color: #059669; border-color: #6ee7b7; }
+
+.deposit-card {
+  margin-top: 6px;
+  background-color: #fffbe8;
+  padding: 6px 8px;
+  border-radius: 8px;
+  border: 1px solid #fde68a;
+  font-size: 0.78rem;
+}
+
+.deposit-row {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.deposit-input {
+  width: 65px;
+  padding: 3px 6px;
+  font-size: 0.8rem;
+}
+
+.remaining-tag {
+  color: #d97706;
+  font-weight: 700;
+  margin-top: 4px;
+}
+
+.btn-delete {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  font-size: 1.1rem;
+  opacity: 0.6;
+  transition: opacity 0.2s ease;
+}
+
+.btn-delete:hover {
+  opacity: 1;
+}
+
+/* Responsive สำหรับ iPad / iPhone */
+@media (max-width: 768px) {
+  .admin-table-container {
+    padding: 16px;
+  }
+
+  .filter-bar {
+    flex-direction: column;
+  }
+
+  .filter-bar input,
+  .filter-bar select {
+    width: 100%;
+  }
+}

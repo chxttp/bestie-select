@@ -1,0 +1,83 @@
+/* src/styles/AdminScreen.css */
+
+.admin-container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 24px 16px;
+  box-sizing: border-box;
+}
+
+/* หัวข้อ Admin */
+.admin-container h2 {
+  font-size: 1.6rem;
+  font-weight: 800;
+  color: #3d2314;
+  margin-top: 0;
+  margin-bottom: 24px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  letter-spacing: -0.3px;
+}
+
+/* แถบ Navigation Tabs */
+.admin-subtabs {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 28px;
+  background-color: #faf6f0;
+  padding: 6px;
+  border-radius: 16px;
+  border: 1px solid #ebdcd0;
+  width: fit-content;
+}
+
+/* ปุ่มแท็บแต่ละอัน */
+.subtab-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 20px;
+  border-radius: 12px;
+  border: none;
+  background-color: transparent;
+  color: #8c7263;
+  font-family: inherit;
+  font-size: 0.92rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.subtab-btn:hover {
+  color: #3d2314;
+  background-color: rgba(61, 35, 20, 0.04);
+}
+
+/* แท็บที่กำลังเลือกใช้งานอยู่ (Active) */
+.subtab-btn.active {
+  background-color: #ffffff;
+  color: #3d2314;
+  box-shadow: 0 4px 12px rgba(61, 35, 20, 0.08);
+}
+
+/* Responsive สำหรับหน้าจอขนาดเล็ก / iPhone */
+@media (max-width: 640px) {
+  .admin-container {
+    padding: 16px 12px;
+  }
+
+  .admin-subtabs {
+    width: 100%;
+    gap: 6px;
+  }
+
+  .subtab-btn {
+    flex: 1;
+    justify-content: center;
+    padding: 10px 8px;
+    font-size: 0.82rem;
+    white-space: nowrap;
+  }
+}
